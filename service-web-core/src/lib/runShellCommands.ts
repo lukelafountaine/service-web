@@ -70,7 +70,7 @@ export default async function runShellCommands(wd: string, cmds: string[], opts:
          if (code === 0) {
             return resolve();
          }
-         reject(new ShellCommandError(`Process exited with code ${code}\n${concatenatedCommand}`));
+         reject(new ShellCommandError(`Process exited with code ${code}`));
       });
    });
 }

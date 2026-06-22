@@ -244,7 +244,7 @@ function addDeploymentTargetBasedCommand(web: Web, cmdName: string, desc: string
             });
          } catch(err) {
             if (err instanceof ShellCommandError) {
-               console.error(`Error running ${cmdName} for ${s.ID}: ${err}\n${err.stack}`);
+               console.error(`Error running ${cmdName} for ${s.ID}: ${err.message}`);
                process.exit(err.exitCode);
             }
             throw err;
